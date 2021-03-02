@@ -6,8 +6,8 @@ from sklearn.metrics import f1_score, accuracy_score
 def f1_multiclass(labels, preds):
     return f1_score(labels, preds, average='micro')
 
-df = pd.read_csv('clothing_reviews.csv')
-train_df, test_df = train_test_split(df, random_state=1)
+train_df = pd.read_csv('clothing_reviews_train.csv')
+test_df = pd.read_csv('clothing_reviews_test.csv')
 train_df['text'] = train_df['text'].astype(str)
 test_df['text'] = test_df['text'].astype(str)
 
