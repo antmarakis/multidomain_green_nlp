@@ -6,8 +6,8 @@ from sklearn.metrics import f1_score, accuracy_score
 def f1_multiclass(labels, preds):
     return f1_score(labels, preds, average='micro')
 
-df = pd.read_csv('reddit_sarcasm_comments.csv')
-train_df, test_df = train_test_split(df, test_size=0.33, random_state=42)
+train_df = pd.read_csv('sarc_train.csv')
+test_df = pd.read_csv('sarc_test.csv')
 
 
 def run_test(lm):
