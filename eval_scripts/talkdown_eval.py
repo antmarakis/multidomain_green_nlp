@@ -5,10 +5,11 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 from sklearn.metrics import f1_score, accuracy_score
 
-
 def f1_multiclass(labels, preds):
     return f1_score(labels, preds, average='micro')
 
+train_df = pd.read_csv('talkdown_train.csv')
+test_df = pd.read_csv('talkdown_test.csv')
 
 def run_test(lm):
     train_df = pd.read_csv('talkdown_train.csv')
