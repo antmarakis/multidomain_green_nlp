@@ -14,7 +14,7 @@ UNDER CONSTRUCTION, WILL BE AVAILABLE SOON (I got hit by another deadline, sorry
 
 * [ACL-ARC](https://web.eecs.umich.edu/~lahiri/acl_arc.html)
 * [AG-News](https://huggingface.co/datasets/ag_news)
-* [ChemProt](potentia.cbs.dtu.dk/ChemProt/)
+* [ChemProt](http://potentia.cbs.dtu.dk/ChemProt/)
 * [Clothing Reviews](https://www.kaggle.com/nicapotato/womens-ecommerce-clothing-reviews)
 * [HyperPartisan](https://huggingface.co/datasets/hyperpartisan_news_detection)
 * [IMDB](https://ai.stanford.edu/~amaas/data/sentiment/)
