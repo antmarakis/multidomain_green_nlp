@@ -1,7 +1,3 @@
-# multidomain_green_nlp
-
-UNDER CONSTRUCTION, WILL BE AVAILABLE SOON (I got hit by another deadline, sorry!)
-
 ## RAW TEXT DOMAIN DATA
 
 * [Amazon Reviews](https://nijianmo.github.io/amazon/index.html)
@@ -23,3 +19,10 @@ UNDER CONSTRUCTION, WILL BE AVAILABLE SOON (I got hit by another deadline, sorry
 * [SARC](https://nlp.cs.princeton.edu/SARC/2.0/)
 * [SciCite](https://huggingface.co/datasets/scicite)
 * [TalkDown](https://github.com/zijwang/talkdown)
+
+
+## CODE
+
+Code is split in multiple evaluation files, one for each task. Models are not provided, but can be pretrained separately using the `run_language_modeling.py` script provided here (or by [HuggingFace](https://github.com/huggingface/transformers/tree/master/examples/language-modeling)).
+
+Each script is indicative of the code run in our machines. Train/dev/test splits are not provided, as they were randomly sampled. Nevertheless, the scripts were tested with multiple samples and performance was as similar as it can be to reported results.
