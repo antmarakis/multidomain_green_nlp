@@ -11,10 +11,8 @@ test_df = pd.read_csv('imdb_test.csv')
 
 def run_test(lm):
     model = ClassificationModel('distilbert', lm, num_labels=2, args={'overwrite_output_dir': True, 'fp16': False, 'save_steps': 100000000})
-
     model.train_model(train_df)
-
-    result, model_outputs, predictions = model.eval_model(test_df, f1=f1_multiclass, acc=accuracy_score)
+    result, model_outputs, wrong_preds = model.eval_model(test_df, f1=f1_multiclass, acc=accuracy_score)
     return result
 
 
