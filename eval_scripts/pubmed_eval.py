@@ -16,10 +16,9 @@ test_df = test_df[['text', 'label']]
 def run_test(lm):
     model = ClassificationModel('distilbert', lm, num_labels=5, args={'overwrite_output_dir': True, 'fp16': False, 'save_steps': 100000000})
 
-    # Train the model
     model.train_model(train_df)
 
-    result, model_outputs, wrong_predictions = model.eval_model(test_df, f1=f1_multiclass, acc=accuracy_score)
+    result, model_outputs, predictions = model.eval_model(test_df, f1=f1_multiclass, acc=accuracy_score)
     return result
 
 
