@@ -12,7 +12,6 @@ train_df['text'] = train_df['text'].astype(str)
 test_df['text'] = test_df['text'].astype(str)
 
 def run_test(lm):
-    # Create a ClassificationModel
     model = ClassificationModel('distilbert', lm, num_labels=5, args={'overwrite_output_dir': True, 'fp16': False, 'num_train_epochs': 1})
 
     model.train_model(train_df)
