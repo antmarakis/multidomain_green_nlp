@@ -12,14 +12,10 @@ train_df = pd.read_csv('talkdown_train.csv')
 test_df = pd.read_csv('talkdown_test.csv')
 
 def run_test(lm):
-    train_df = pd.read_csv('talkdown_train.csv')
-    test_df = pd.read_csv('talkdown_test.csv')
-
-    # Create a ClassificationModel
     model = ClassificationModel('distilbert', lm, num_labels=2, args={'overwrite_output_dir': True, 'fp16': False, 'num_train_epochs': 2})
     model.train_model(train_df)
 
-    result, model_outputs, wrong_predictions = model.eval_model(test_df, f1=f1_multiclass, acc=accuracy_score)
+    result, model_outputs, predictions = model.eval_model(test_df, f1=f1_multiclass, acc=accuracy_score)
 
     return result
 
