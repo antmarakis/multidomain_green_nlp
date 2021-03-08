@@ -1,7 +1,6 @@
 import numpy as np
 from simpletransformers.classification import ClassificationModel
 import pandas as pd
-# Evaluate the model
 from sklearn.metrics import f1_score, accuracy_score
 def f1_multiclass(labels, preds):
     return f1_score(labels, preds, average='micro')
@@ -17,14 +16,13 @@ test_df = test_df[['text', 'label']]
 test_df['label'] = test_df['label'].apply(lambda x:x-1)
 
 def run_test(lm):
-    # Create a ClassificationModel
     model = ClassificationModel('distilbert', lm, num_labels=4,
                                 args={'overwrite_output_dir': True, 'fp16': False,
                                 'save_steps':-1})
 
     # Train the model
     model.train_model(train_df)
-    result, model_outputs, wrong_predictions = model.eval_model(test_df, f1=f1_multiclass, acc=accuracy_score)
+    result, model_outputs, predictions = model.eval_model(test_df, f1=f1_multiclass, acc=accuracy_score)
 
     return result
 
