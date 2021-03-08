@@ -17,7 +17,7 @@ def run_test(lm):
 
     model.train_model(train_df)
 
-    result, model_outputs, wrong_predictions = model.eval_model(test_df, f1=f1_multiclass, acc=accuracy_score)
+    result, model_outputs, predictions = model.eval_model(test_df, f1=f1_multiclass, acc=accuracy_score)
     return result
 
 
