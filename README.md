@@ -1,3 +1,5 @@
+Code for [Multidomain Language Models for Green NLP](https://www.aclweb.org/anthology/2021.adaptnlp-1.1/).
+
 ## RAW TEXT DOMAIN DATA
 
 * [Amazon Reviews](https://nijianmo.github.io/amazon/index.html)
